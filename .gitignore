@@ -51,5 +51,100 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# debug information files
+# Debug information files
 *.dwo
+
+# ====== ESP32 / ESP-IDF Specific ======
+# Build directory
+build/
+sdkconfig
+sdkconfig.old
+.config
+.config.old
+
+# ESP-IDF dependencies
+managed_components/
+dependencies.lock
+
+# Additional ESP32 build artifacts
+*.bin
+*.lst
+*.sym
+
+# ====== FreeRTOS Specific ======
+FreeRTOSConfig.h.bak
+
+# ====== Zephyr OS Specific ======
+zephyr/.config
+zephyr/build/
+zephyr/outdir/
+zephyr/zephyr.dts
+zephyr/zephyr.dts.pre.tmp
+zephyr/zephyr.dts.tmp
+zephyr/.west/
+west.yml.bak
+
+# ====== Development Tools ======
+# Platform.IO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Arduino IDE
+*.fqbn
+*.bak
+
+# Python (ESP-IDF uses Python)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ====== OS Specific ======
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+# ====== Logs and Temporary Files ======
+*.log
+*.tmp
+*.temp
+core
+*.core
+
+# ====== Security (Never commit these) ======
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets.h
+credentials.h
+local_config.h
+
+# ====== Backup Files ======
+*.backup
+*.old
+
+# ====== ESP32 Flash Tools ======
+flash_download_tool_*
+bootloader.bin
+partition_table.bin
+ota_data_initial.bin
+factory_app.bin
