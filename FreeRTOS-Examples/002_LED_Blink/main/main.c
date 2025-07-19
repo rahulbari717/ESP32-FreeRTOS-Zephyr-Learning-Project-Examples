@@ -60,7 +60,6 @@ static const char *TAG  = "LED";
 static const char *TAG_RED   = "RED_LED";
 static const char *TAG_WHITE = "WHITE_LED";
 
-
 /* Reset reason lookup table */
 static const char *reset_reasons[] = {
                                         "ESP_RST_UNKNOWN", 
@@ -112,7 +111,6 @@ void red_led_task(void *param) {
     }
 }
 
-
 /* ────── WHITE LED Task (Core 1) ────── */
 void white_led_task(void *param) {
     
@@ -127,7 +125,6 @@ void white_led_task(void *param) {
         vTaskDelay(pdMS_TO_TICKS(WHITE_LED_DELAY_MS / 2));
     }
 }
-
 
 /* ────── Initializer ────── */
 static esp_err_t initializer(void) {
@@ -210,5 +207,4 @@ void app_main(void)
     initialize_system();
     print_project_banner();
     start_led_task();
-
 }
